@@ -38,17 +38,13 @@ Projenin sorunsuz çalışması için yayımlanan (Publish) klasör düzeninin a
 ├── 📄 MC Server Manager.exe   # Ana çalıştırılabilir uygulama
 ├── 📄 WebView2Loader.dll      # Tarayıcı motoru yükleyicisi (Kritik Dosya)
 └── 📁 runtimes/               # WebView2 için gerekli sistem mimari dosyaları
-⚠️ NOT: Temiz bir görünüm için yayımlama sonrası kalabalık yapan .xml ve .pdb uzantılı dosyalar güvenle silinmiştir. Arayuz klasörü ve WebView2Loader.dll dosyalarına kesinlikle dokunulmamalıdır.
+⚠️ NOT: Temiz bir görünüm için yayımlama sonrası kalabalık yapan .xml ve .pdb uzantılı dosyalar güvenle silinmiştir. Arayuz klasörü ve WebView2Loader.dll dosyalarına kesinlikle dokunulmamalıdır.```text
 
 🛠️ Kurulum ve Çalıştırma
 Projeyi bilgisayarınıza indirin veya Visual Studio ile derleyin (Publish).
-
 Derlenen klasörün içinde Arayuz adında bir klasör oluşturup index.html, style.css ve app.js dosyalarını bu klasörün içine taşıyın.
-
 MC Server Manager.exe dosyasını çift tıklayarak çalıştırın.
-
 Panel açıldığında sisteminizdeki Java durumu otomatik kontrol edilecek ve eksikse kurulacaktır.
-
 Sunucularınız varsayılan olarak depolama alanınızın durumuna göre otomatik olarak D:\MCEngineServers veya C:\MCEngineServers dizini altında oluşturulur.
 
 💻 Kullanılan Teknolojiler
@@ -60,13 +56,9 @@ Veri Köprüsü: Asenkron PostWebMessageAsJson ve WebMessageReceived çift yönl
 
 🤝 Katkıda Bulunma
 Bu projeyi fork edin (git fork).
-
 Yeni bir özellik dalı (feature branch) açın (git checkout -b yeni-ozellik).
-
 Değişikliklerinizi commit edin (git commit -am 'Yeni özellik eklendi').
-
 Dalınızı push edin (git push origin yeni-ozellik).
-
 Bir Pull Request (Çekme İsteği) oluşturun.
 
 📄 Lisans
