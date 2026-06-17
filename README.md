@@ -1,6 +1,6 @@
 # 🎮 MC Server Manager - Ultra Core v1.2
 
-![C#](https://img.shields.io/badge/C%23-.NET%208.0-purple.svg)
+![C#](https://img.shields.io/badge/C%23-.NET%2010.0-purple.svg)
 ![WebView2](https://img.shields.io/badge/UI-WebView2%20%252B%20Tailwind-blue.svg)
 ![Minecraft](https://img.shields.io/badge/Minecraft-Java%20%26%20Bedrock-emerald.svg)
 ![License](https://img.shields.io/badge/Lisans-MIT-orange.svg)
@@ -27,6 +27,7 @@ Masaüstünün gücünü, modern web teknolojilerinin şıklığıyla birleştir
 
 Projenin sorunsuz çalışması için yayımlanan (Publish) klasör düzeninin aşağıdaki gibi olması gerekmektedir:
 
+```text
 📁 MC Server Manager/
 ├── 📁 Arayuz/
 │   ├── 📄 index.html
@@ -35,39 +36,36 @@ Projenin sorunsuz çalışması için yayımlanan (Publish) klasör düzeninin a
 ├── 📄 MC Server Manager.exe
 ├── 📄 WebView2Loader.dll
 └── 📁 runtimes/
+⚠️ NOT: Temiz bir görünüm için yayımlama sonrasında kalabalık yapan .xml ve .pdb uzantılı dosyalar güvenle silinmiştir. Arayuz klasörü ve WebView2Loader.dll dosyalarına kesinlikle dokunulmamalıdır.
 
-⚠️ **NOT:** Temiz bir görünüm için yayımlama sonrasında kalabalık yapan `.xml` ve `.pdb` uzantılı dosyalar güvenle silinmiştir. `Arayuz` klasörü ve `WebView2Loader.dll` dosyalarına kesinlikle dokunulmamalıdır.
+🛠️ Kurulum ve Çalıştırma
+Projeyi bilgisayarınıza indirin veya Visual Studio ile derleyin (Publish).
 
----
+Derlenen klasörün içinde Arayuz adında bir klasör oluşturup index.html, style.css ve app.js dosyalarını bu klasörün içine taşıyın.
 
-## 🛠️ Kurulum ve Çalıştırma
+MC Server Manager.exe dosyasını çift tıklayarak çalıştırın.
 
-* Projeyi bilgisayarınıza indirin veya Visual Studio ile derleyin (Publish).
-* Derlenen klasörün içinde Arayuz adında bir klasör oluşturup index.html, style.css ve app.js dosyalarını bu klasörün içine taşıyın.
-* MC Server Manager.exe dosyasını çift tıklayarak çalıştırın.
-* Panel açıldığında sisteminizdeki Java durumu otomatik kontrol edilecek ve eksikse kurulacaktır.
-* Sunucularınız varsayılan olarak depolama alanınızın durumuna göre otomatik olarak D:\MCEngineServers veya C:\MCEngineServers dizini altında oluşturulur.
+Panel açıldığında sisteminizdeki Java durumu otomatik kontrol edilecek ve eksikse kurulacaktır.
 
----
+Sunucularınız varsayılan olarak depolama alanınızın durumuna göre otomatik olarak D:\MCEngineServers veya C:\MCEngineServers dizini altında oluşturulur.
 
-## 💻 Kullanılan Teknolojiler
+💻 Kullanılan Teknolojiler
+Backend: C# (.NET 10.0 WinForms), Microsoft.Web.WebView2, System.Text.Json, HttpClient
 
-* **Backend:** C# (.NET WinForms), Microsoft.Web.WebView2, System.Text.Json, HttpClient
-* **Frontend:** HTML5, Tailwind CSS, FontAwesome v6, Vanilla JavaScript
-* **Veri Köprüsü:** Asenkron PostWebMessageAsJson ve WebMessageReceived çift yönlü haberleşme hattı.
+Frontend: HTML5, Tailwind CSS, FontAwesome v6, Vanilla JavaScript
 
----
+Veri Köprüsü: Asenkron PostWebMessageAsJson ve WebMessageReceived çift yönlü haberleşme hattı.
 
-## 🤝 Katkıda Bulunma
+🤝 Katkıda Bulunma
+Bu projeyi fork edin (git fork).
 
-* Bu projeyi fork edin (git fork).
-* Yeni bir özellik dalı (feature branch) açın (git checkout -b yeni-ozellik).
-* Değişikliklerinizi commit edin (git commit -am 'Yeni özellik eklendi').
-* Dalınızı push edin (git push origin yeni-ozellik).
-* Bir Pull Request (Çekme İsteği) oluşturun.
+Yeni bir özellik dalı (feature branch) açın (git checkout -b yeni-ozellik).
 
----
+Değişikliklerinizi commit edin (git commit -am 'Yeni özellik eklendi').
 
-## 📄 Lisans
+Dalınızı push edin (git push origin yeni-ozellik).
 
+Bir Pull Request (Çekme İsteği) oluşturun.
+
+📄 Lisans
 Bu proje MIT Lisansı ile lisanslanmıştır. Detaylar için lisans dosyasına göz atabilirsiniz.
