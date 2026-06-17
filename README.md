@@ -1,71 +1,108 @@
-# 🎮 MC Server Manager - Ultra Core v1.2
+# 🚀 MC Sunucu Yöneticisi (Minecraft Server Manager)
 
-![C#](https://img.shields.io/badge/C%23-.NET%2010.0-purple.svg)
-![WebView2](https://img.shields.io/badge/UI-WebView2%20%252B%20Tailwind-blue.svg)
-![Minecraft](https://img.shields.io/badge/Minecraft-Java%20%26%20Bedrock-emerald.svg)
-![License](https://img.shields.io/badge/Lisans-MIT-orange.svg)
+Minecraft sunucularınızı kolayca oluşturmak, yönetmek ve kontrol etmek için geliştirilmiş modern bir masaüstü uygulaması.
 
-**MC Server Manager**, hem Minecraft Java hem de Bedrock sunucularını tek bir panelden, ultra düşük kaynak tüketimi ve modern bir web arayüzü (HTML5/CSS3/Tailwind) ile yönetmenizi sağlayan, C# WinForms tabanlı hibrit bir sunucu yönetim panelidir.
+## 📦 Sürüm
 
-Masaüstünün gücünü, modern web teknolojilerinin şıklığıyla birleştirir!
+**v1.2 - Ultra Core Güncellemesi**
 
----
-
-## ✨ Öne Çıkan Özellikler
-
-* **🚀 Çift Platform Desteği:** Tek tıkla Minecraft Java (Vanilla, PaperMC, Purpur) veya Bedrock (Dedicated, PocketMine-MP) sunucuları kurun.
-* **📦 Akıllı Bağımlılık Yönetimi:** Sistemde Java yoksa otomatik olarak algılar ve arka planda resmi **OpenJDK 21** kurulumunu gerçekleştirir.
-* **📊 Dinamik RAM Yönetimi:** Sunucuyu başlatmadan önce panel üzerinden ne kadar RAM (1GB - 12GB+) atanacağını dinamik olarak seçin.
-* **🌐 GeyserMC Entegrasyonu:** Java sunucularınıza Bedrock oyuncularının da katılabilmesi için tek tıkla **Geyser-Spigot** veya **Geyser-Velocity** eklentilerini otomatik indirin.
-* **💬 Canlı Konsol & Oyuncu Takibi:** Sunucu loglarını anlık olarak panelden izleyin, komut gönderin ve oyuna giren/çıkan oyuncuları canlı listeden takip edin.
-* **📝 Gelişmiş Konfigürasyon Editörü:** `server.properties` dosyasını klasörler arasında kaybolmadan direkt panel üzerinden okuyun, düzenleyin ve kaydedin.
-* **🔒 Ultra Stabilite Modu:** C# arka plan thread'leri ile WebView2 arayüzü arasındaki iletişim özel kilitlenme koruması (`BeginInvoke` mimarisi) ile korunur; çökme veya donma yaşanmaz.
+Bu güncelleme ile birlikte proje mimarisi tamamen optimize edilmiş, gereksiz dosyalar temizlenmiş ve daha sürdürülebilir bir modüler yapı oluşturulmuştur.
 
 ---
 
-## 📂 Klasör Yapısı
+## ✨ Yenilikler
 
-Projenin sorunsuz çalışması için yayımlanan (Publish) klasör düzeninin aşağıdaki gibi olması gerekmektedir:
+### 🏗️ Klasör Yapısı Yenilendi
+
+* `index.html`
+* `style.css`
+* `app.js`
+
+gibi web arayüzü dosyaları ana dizinden kaldırılarak yeni **Arayuz/** klasörüne taşındı.
+
+* Daha temiz proje yapısı
+* Daha kolay bakım
+* Gelişmiş modülerlik
+* Güncellenmiş C# dosya yolları
+
+---
+
+### 🧹 Gereksiz Dosyalar Temizlendi
+
+Yayınlama (Publish) sonrasında oluşan ve son kullanıcı için gerekli olmayan:
+
+* `.xml`
+* `.pdb`
+
+dosyaları kaldırıldı.
+
+Böylece:
+
+✅ Daha temiz klasör yapısı
+✅ Daha küçük dağıtım boyutu
+✅ Daha profesyonel görünüm
+
+---
+
+### ⚡ Performans İyileştirmeleri
+
+WebView2 bileşeninde yapılan optimizasyonlarla:
+
+* Arayüz yüklenme süresi azaltıldı.
+* Gereksiz işlem yükü kaldırıldı.
+* Bellek kullanımı optimize edildi.
+
+---
+
+### 🔒 Kararlılık ve Güvenlik
+
+UI iş parçacığı çakışmalarını önlemek amacıyla:
+
+* Kilitlenme koruma sistemi geliştirildi.
+* Arayüz donmaları azaltıldı.
+* Daha stabil çalışma sağlandı.
+
+---
+
+## 📁 Klasör Yapısı
 
 ```text
-📁 MC Server Manager/
-├── 📁 Arayuz/
-│   ├── 📄 index.html
-│   ├── 📄 style.css
-│   └── 📄 app.js
-├── 📄 MC Server Manager.exe
-├── 📄 WebView2Loader.dll
-└── 📁 runtimes/
-⚠️ NOT: Temiz bir görünüm için yayımlama sonrasında kalabalık yapan .xml ve .pdb uzantılı dosyalar güvenle silinmiştir. Arayuz klasörü ve WebView2Loader.dll dosyalarına kesinlikle dokunulmamalıdır.
+Minecraft Server Manager/
+│
+├── MinecraftServerManager.exe
+│
+├── Arayuz/
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
+│
+└── Diğer Sistem Dosyaları
+```
 
-🛠️ Kurulum ve Çalıştırma
-Projeyi bilgisayarınıza indirin veya Visual Studio ile derleyin (Publish).
+---
 
-Derlenen klasörün içinde Arayuz adında bir klasör oluşturup index.html, style.css ve app.js dosyalarını bu klasörün içine taşıyın.
+## ⚠️ Kurulum
 
-MC Server Manager.exe dosyasını çift tıklayarak çalıştırın.
+Uygulamanın düzgün çalışabilmesi için:
 
-Panel açıldığında sisteminizdeki Java durumu otomatik kontrol edilecek ve eksikse kurulacaktır.
+1. Ana `.exe` dosyasını taşımayın.
+2. `Arayuz` klasörünü silmeyin.
+3. Tüm dosyaların aynı dağıtım paketinde bulunduğundan emin olun.
 
-Sunucularınız varsayılan olarak depolama alanınızın durumuna göre otomatik olarak D:\MCEngineServers veya C:\MCEngineServers dizini altında oluşturulur.
+Eksik web bileşenleri uygulamanın açılmamasına veya arayüz hatalarına neden olabilir.
 
-💻 Kullanılan Teknolojiler
-Backend: C# (.NET 10.0 WinForms), Microsoft.Web.WebView2, System.Text.Json, HttpClient
+---
 
-Frontend: HTML5, Tailwind CSS, FontAwesome v6, Vanilla JavaScript
+## 📋 Değişiklik Günlüğü
 
-Veri Köprüsü: Asenkron PostWebMessageAsJson ve WebMessageReceived çift yönlü haberleşme hattı.
+Tüm sürüm geçmişi ve commit kayıtları:
 
-🤝 Katkıda Bulunma
-Bu projeyi fork edin (git fork).
+https://github.com/TRServer-Inc/Minecraft-Server-Manager/commits/v1.2
 
-Yeni bir özellik dalı (feature branch) açın (git checkout -b yeni-ozellik).
+---
 
-Değişikliklerinizi commit edin (git commit -am 'Yeni özellik eklendi').
+## ❤️ Destek
 
-Dalınızı push edin (git push origin yeni-ozellik).
+Herhangi bir hata, öneri veya geliştirme talebi için GitHub Issues bölümünü kullanabilirsiniz.
 
-Bir Pull Request (Çekme İsteği) oluşturun.
-
-📄 Lisans
-Bu proje MIT Lisansı ile lisanslanmıştır. Detaylar için lisans dosyasına göz atabilirsiniz.
+**TRServer Inc.**
