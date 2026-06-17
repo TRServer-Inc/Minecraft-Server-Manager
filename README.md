@@ -28,17 +28,15 @@ Masaüstünün gücünü, modern web teknolojilerinin şıklığıyla birleştir
 Projenin sorunsuz çalışması için yayımlanan (Publish) klasör düzeninin aşağıdaki gibi olması gerekmektedir:
 
 📁 MC Server Manager/
-│
-├── 📁 Arayuz/                 # Web arayüz bileşenleri (Kritik Klasör)
-│   ├── 📄 index.html          # Ana panel yapısı
-│   ├── 📄 style.css           # Özel temalandırma ve scrollbar ayarları
-│   └── 📄 app.js              # C# ile köprü kuran JavaScript kodları
-│
-├── 📄 MC Server Manager.exe   # Ana çalıştırılabilir uygulama
-├── 📄 WebView2Loader.dll      # Tarayıcı motoru yükleyicisi (Kritik Dosya)
-└── 📁 runtimes/               # WebView2 için gerekli sistem mimari dosyaları
+├── 📁 Arayuz/
+│   ├── 📄 index.html
+│   ├── 📄 style.css
+│   └── 📄 app.js
+├── 📄 MC Server Manager.exe
+├── 📄 WebView2Loader.dll
+└── 📁 runtimes/
 
-> ⚠️ **NOT:** Temiz bir görünüm için yayımlama sonrası kalabalık yapan `.xml` ve `.pdb` uzantılı dosyalar güvenle silinmiştir. `Arayuz` klasörü ve `WebView2Loader.dll` dosyalarına kesinlikle dokunulmamalıdır.
+⚠️ **NOT:** Temiz bir görünüm için yayımlama sonrasında kalabalık yapan `.xml` ve `.pdb` uzantılı dosyalar güvenle silinmiştir. `Arayuz` klasörü ve `WebView2Loader.dll` dosyalarına kesinlikle dokunulmamalıdır.
 
 ---
 
